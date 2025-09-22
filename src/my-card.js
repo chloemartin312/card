@@ -22,7 +22,11 @@ export class MyCard extends LitElement {
   static get styles() {
     return css`
       :host {
-        display: block;
+        display: inline-block;
+      }
+
+      :host([fancy]) .card{
+        background-color: var(--my-card-fancy-bg )
       }
       
       .card {
@@ -34,15 +38,10 @@ export class MyCard extends LitElement {
         border: 5px solid pink;
         border-radius: 8px;
         background-color: #9569a3;
-        transition: .6s all ease-in-out;
       }
 
       .card .card-image {
         max-width: 300px;
-      }
-
-      .card.change-background {
-        background-color: #66356E;
       }
 
       .text {
@@ -50,40 +49,9 @@ export class MyCard extends LitElement {
         color: pink;
       }
 
-      .button {
-        display: none;
-      }
-
-      @media (min-width: 501px) and (max-width: 799px) {
-        .button {
-          display: inline-block;
-        }
-      }
-
       button:hover {
         background-color: pink;
         color: black;
-      }
-
-      @media (max-width: 500px) {
-        .card {
-          width: 90%;
-          margin: 16px;
-          padding: 16px;
-        }
-
-        .card h1 {
-          font-size: 20px;
-        }
-
-        .card p {
-          font-size: 14px;
-        }
-
-        .card .card-image {
-          max-width: 100%;
-          height: auto;
-        }
       }
     `;
   }
@@ -96,11 +64,9 @@ export class MyCard extends LitElement {
             <img class="card-image" src="${this.image}" alt="Picture of ${this.title}">
             <p>${this.description}</p>
           </div>
-          <div class="button">
             <a href="https://hax.psu.edu"> 
               <button>Details</button>
             </a>
-          </div>
         </div>
     `;
   }
@@ -110,7 +76,8 @@ export class MyCard extends LitElement {
       title: {type: String },
       cardTitle: {type: String},
       image: {type: String },
-      description: { type: String }
+      description: { type: String},
+      fancy: {type: Boolean, reflect: true}
     };
   }
 }
