@@ -59,11 +59,9 @@ export class MyCard extends LitElement {
   render() {
     return html`
         <div class="card">
-          <div class="text">
-            <h3 class="card-title">${this.cardTitle}</h3>
-            <img class="card-image" src="${this.image}" alt="Picture of ${this.title}">
-            <p>${this.description}</p>
-          </div>
+            <h3 class="text">${this.cardTitle}</h3>
+            <img class="card-image" src="${this.image}" alt="Picture of ${this.cardTitle}">
+            <p class="text">${this.description}</p>
             <a href="https://hax.psu.edu"> 
               <button>Details</button>
             </a>
