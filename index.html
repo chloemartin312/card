@@ -16,64 +16,55 @@
       font-family: sans-serif;
       background-color: #ededed;
     }
-    polaris-chip {
-      margin: 16px;
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
     }
 
   </style>
-  <title>polaris-chip / my-card</title>
+
+  <title>My-card</title>
 </head>
 
 <body>
-  <h1>polaris-chip</h1>
-  <!-- this is going to do whatever the tag's defaults are -->
-  <polaris-chip title="News of Record" link="https://psu.edu/"></polaris-chip>
-  <polaris-chip title="Faculty and Staff"></polaris-chip>
-  <polaris-chip title="Sports are the only thing that matter"></polaris-chip>
-  <polaris-chip title="Grants and donations"></polaris-chip>
-
-    <h1>my-card OG</h1>
+  <div class = card-container>
     <my-card></my-card>
 
-    <h1>my-card1</h1>
     <my-card
       cardTitle="Tulip"
       image="https://www.dutchgrown.com/cdn/shop/products/Tulip_Houston_Triumph_Mix-5.jpg?v=1677771624"
       description="These are tulip flowers.">
     </my-card>
 
-    <h1>my-card2</h1>
-      <my-card
+    <my-card
       cardTitle="Chrysanthemum"
       image="https://www.bluestoneperennials.com/img/MDEBU/600/MDEBU_0_Mum_Debutante.1625814699.jpg"
       description="These are chrysanthemum flowers.">
     </my-card>
 
-    <h1>my-card3</h1>
     <my-card
       cardTitle="Sunflower"
       image="https://www.everwilde.com/media/0800/FHELANN-A-Wild-Annual-Sunflower-Seeds.jpg"
       description="This is a sunflower.">
     </my-card>
 
-    <h1>my-card4</h1>
     <my-card
       cardTitle="Azalea"
       image="https://www.monrovia.com/media/amasty/blog/600x800_double_shot_grape_azalea_copy.jpg"
       description="This is an azalea flower.">
      </my-card>
 
-    <h1>my-card5</h1>
     <my-card
       cardTitle="Lavendar"
       image="https://www.jekkas.com/cdn/shop/articles/blog-image-lavender-5_3024x.jpg?v=1594565422"
       description="These are lavendar flowers.">
     </my-card>
+  </div>
  
-
   <!-- this is what is bringing in the definition for this tag -->
-  <script type="module" src="./src/polaris-chip.js"></script>
   <script type="module" src="./src/my-card.js"></script>
 </body>
-
 </html>
