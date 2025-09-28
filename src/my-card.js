@@ -32,6 +32,7 @@ export class MyCard extends LitElement {
 
       .card {
         max-width: 400px;
+        margin: 16px;
         padding: 16px;
         text-align: center;
         border: 5px solid pink;
@@ -39,8 +40,37 @@ export class MyCard extends LitElement {
         background-color: #9569a3;
       }
 
+      details summary {
+        text-align: center;
+        font-size: 20px;
+        padding: 8px 0;
+      }
+
+      details[open] summary {
+        font-weight: bold;
+      }
+      
+      details div {
+        border: 2px solid black;
+        text-align: center;
+        padding: 8px;
+        height: 70px;
+        overflow: auto;
+      }
+
+      .card h3 {
+        height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
       .card .card-image {
-        max-width: 300px;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 6px;
+        display: block;
       }
 
       .text {
